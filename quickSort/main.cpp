@@ -13,7 +13,7 @@ void qs(int *data, int left, int right)
     int key = data[left];
     while(i != j)
     {
-        while(data[j] >= key && i < j)
+        while(data[j] >= key && i < j) // 先要右边，一次相遇的时候，挺的位置才是比key小的位置，后面才能交换
             j --;
 
         while(data[i] <= key && i < j) // <= 等于千万别忘记
